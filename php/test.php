@@ -88,7 +88,4 @@ author = {Tryon, Chuck}
     $ret = $ct->monitoring_delete($pub_key,'bing','test2');
     var_dump($ret);    
     
-    
-    
-
 ?>
