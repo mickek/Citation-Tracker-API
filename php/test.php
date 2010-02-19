@@ -53,6 +53,12 @@ author = {Tryon, Chuck}
         echo "\tgot: '{$cc->title}'\r\n";
     }
     
+    $ret = $ct->citations_list($pub_key,'new','desc');
+    foreach( $ret as $cc ){
+        echo "\tgot: '{$cc->title}'\r\n";
+    }
+    
+    
     if( sizeof($ret)==0){
         echo "Can't test citations / monitorings without citations in local db\r\n";
         exit;

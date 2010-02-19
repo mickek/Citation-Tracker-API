@@ -42,10 +42,11 @@ class Citracker extends RestApi{
         return $this->request($url, array("get"=>array('key'=>$key)));
     }
     
-    function citations_list($key, $state = null){
+    function citations_list($key, $state = null, $sort = null){
         $url = "{$this->host}citations/list.{$this->format}";
         $data = array('publication_key'=>$key);
         if($state != null) $data['state'] = $state;
+        if($sort  != null) $data['sort'] = $state;
         return $this->request($url, array("get"=>$data));
     }
 
